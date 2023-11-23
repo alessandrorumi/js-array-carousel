@@ -18,17 +18,19 @@ arrowDown.addEventListener('click', function() {
     items[activeItem].classList.remove('active');
 
     activeItem++;
+
     // Aggiunta Classe 'active'
     items[activeItem].classList.add('active');
 
   }
+
     // Se è alla fine dell'array
     if (activeItem === items.length - 1) {
       // Aggiunta Classe 'hidden'
       arrowDown.classList.add('hidden');
     }
 
-    // Al click di arrowDown se arrowUp è !== 0
+    // Al click di arrowDown se activeItem è !== 0
     arrowUp.classList.remove('hidden');
 
 });
@@ -43,12 +45,11 @@ arrowUp.addEventListener('click', function() {
 
   activeItem--;
 
-  if (activeItem >= 0) {
-    // Aggiunta Classe 'active'
-    items[activeItem].classList.add('active');
-  }
+  // Aggiunta Classe 'active'
+  items[activeItem].classList.add('active');
 
   if (activeItem === 0) {
+    // Aggiunta Classe 'hidden'
     arrowUp.classList.add('hidden');
   }
 
