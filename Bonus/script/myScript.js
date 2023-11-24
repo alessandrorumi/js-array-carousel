@@ -22,6 +22,16 @@ arrowDown.addEventListener('click', function() {
     // Aggiunta Classe 'active'
     items[activeItem].classList.add('active');
     
+  } else if (activeItem === items.length - 1) {
+    
+    // Rimozione Classe 'active'
+    items[activeItem].classList.remove('active');
+    
+    activeItem = 0;
+
+    // Aggiunta Classe 'active'
+    items[activeItem].classList.add('active');
+    
   }
 
 });
