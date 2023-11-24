@@ -31,7 +31,10 @@ arrowDown.addEventListener('click', function() {
     }
 
     // Al click di arrowDown se activeItem è !== 0
-    arrowUp.classList.remove('hidden');
+    if (activeItem !== 0) {
+      // Rimozione Classe 'hidden'
+      arrowUp.classList.remove('hidden');
+    }
 
 });
 
@@ -54,6 +57,9 @@ arrowUp.addEventListener('click', function() {
   }
 
   // Al click di arrowUp se activeItem !== items.length - 1
-  arrowDown.classList.remove('hidden');
+  if (activeItem !== items.length - 1) {
+    // Rimozione Classe 'hidden'
+    arrowDown.classList.remove('hidden');  
+  }
 
 });

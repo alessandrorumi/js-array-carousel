@@ -38,17 +38,27 @@ arrowDown.addEventListener('click', function() {
 
 // Al click di Arrow Up
 arrowUp.addEventListener('click', function() {
+  
   // Rimozione Classe 'active'
   items[activeItem].classList.remove('active');
 
-  activeItem--;
-
-  // Aggiunta Classe 'active'
-  items[activeItem].classList.add('active');
-
+  // Se è all'inizio dell'array
   if (activeItem === 0) {
-    // Aggiunta Classe 'hidden'
-    arrowUp.classList.add('hidden');
-  }
 
+    // Vai all'ultimo elemento
+    activeItem = items.length - 1;
+
+    // Aggiunta Classe 'active'
+    items[activeItem].classList.add('active');
+
+  } else {
+
+    // Decremento
+    activeItem--;
+
+    // Aggiunta Classe 'active'
+    items[activeItem].classList.add('active');
+
+  }
+ 
 });
