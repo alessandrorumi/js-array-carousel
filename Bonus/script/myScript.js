@@ -27,6 +27,7 @@ arrowDown.addEventListener('click', function() {
     // Rimozione Classe 'active'
     items[activeItem].classList.remove('active');
     
+    // Vai al primo elemento
     activeItem = 0;
 
     // Aggiunta Classe 'active'

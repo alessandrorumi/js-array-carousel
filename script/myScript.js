@@ -22,7 +22,9 @@ arrowDown.addEventListener('click', function() {
     // Aggiunta Classe 'active'
     items[activeItem].classList.add('active');
 
-  }
+  } // else if??
+
+  // PERCHè NON ELSE IF CON activeItem < items.length - 2? PERCHE VERIFICARE ENTRAMBE? SE ACTIVEITEM è O < 0 O ===?
 
     // Se è alla fine dell'array
     if (activeItem === items.length - 1) {
